@@ -1,0 +1,141 @@
+:root {
+    --color-primary: rgb(255, 255, 255);
+    --color-secondary: rgb(185, 185, 185);
+    --color-tertiary: rgb(208, 255, 0);
+
+    --background-color: rgba(37, 37, 37, 0.6);
+  }
+
+  p,a,body{
+    margin: 0;
+    padding: 0;
+  }
+
+  .hide{
+    opacity: 0;
+    transition: 0.25s;
+  }
+
+  h1{
+    font-weight: 400;
+  }
+
+  body{
+    font-family: "Montserrat", sans-serif;
+    color: var(--color-primary);
+    background-color: var(--background-color);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+.select-spawn-box{
+  display: grid;
+  grid-template:
+    'ls ls lv lv sf'
+    'ls ls fc bm sf'
+    'pr pr lp lp ap';
+  gap: 20px;
+  width: 1200px;
+}
+
+.spawn{
+  width: 100%;
+  background-color: var(--background-color);
+  transition: 0.25s;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  box-sizing: border-box;
+  transition: 0.25s;
+  background-size: 150%;
+}
+
+.spawn:hover{
+  background-size: 200%;
+  transition: 0.25s;
+}
+
+#los-santos{
+  background-image: url(img/ls.png);
+  grid-area: ls;
+}
+
+#las-venturas{
+  background-image: url(img/lv.png);
+  grid-area: lv;
+}
+
+#san-fierro{
+  background-image: url(img/sf.png);
+  grid-area: sf;
+  background-size: 250%;
+}
+
+#san-fierro:hover{
+  background-size: 300%;
+}
+
+#fort-carson{
+  background-image: url(img/fc.png);
+  grid-area: fc;
+}
+
+#bayaside-marina{
+  background-image: url(img/bm.png);
+  grid-area: bm;
+}
+
+#angel-pine{
+  background-image: url(img/ap.png);
+  grid-area: ap;
+}
+
+#last-place{
+  background-image: url(img/lp.png);
+  grid-area: lp;
+}
+
+#property{
+  background-image: url(img/pr.png);
+  grid-area: pr;
+}
+
+h2 {
+  color: var(--color-tertiary);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0px
+}
+p{
+  font-size: 14px;
+}
+
+.rich-text{
+  z-index: 5;
+}
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.397) 0%, transparent 100%);
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+
+.locked{
+  filter: blur(2px) grayscale(100%) brightness(0.5);
+}
+
+.locked:hover{
+  background-size: 150%;
+}
+
